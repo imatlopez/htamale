@@ -23,10 +23,9 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "~2.1.0",
+    "cheerio": "^1.0.0-rc.2",
     "commander": "~2.11.0",
-    "jquery": "^3.2.1",
     "js-beautify": "^1.7.3",
-    "jsdom": "^11.2.0",
     "mkdirp": "~0.5.1"
   },
   "devDependencies": {
