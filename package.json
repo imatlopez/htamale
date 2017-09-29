@@ -1,6 +1,6 @@
 {
   "name": "htamale",
-  "version": "0.0.1",
+  "version": "1.0.0-alpha1",
   "description": "HTML templating made simple.",
   "main": "lib/index.js",
   "bin": "bin/htamale",
@@ -26,7 +26,8 @@
     "cheerio": "^1.0.0-rc.2",
     "commander": "~2.11.0",
     "js-beautify": "^1.7.3",
-    "mkdirp": "~0.5.1"
+    "mkdirp": "~0.5.1",
+    "moment": "^2.18.1"
   },
   "devDependencies": {
     "chai": "~4.1.2",
