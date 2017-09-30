@@ -1,3 +1,20 @@
 {
-    "hello": "world"
+    "field1": {
+        "subfield1": {
+            "type": "html",
+            "tag": "a",
+            "attr": {
+                "href": "about:blank"
+            }
+        },
+        "subfield2": {
+            "subsubfield1": "woohoo",
+            "subsubfield2": {
+                "type": "date",
+                "format": "gen2",
+                "year": 2017,
+                "month": 8
+            }
+        }
+    }
 }
