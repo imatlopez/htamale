@@ -1,5 +1,5 @@
 /*!
- * htamale: test/_interval.t.js
+ * htamale: test/01b._interval.js
  */
 'use strict';
 
