@@ -1,5 +1,5 @@
 /*!
- * htamale: test/_html.t.js
+ * htamale: test/01c._html.js
  */
 'use strict';
 
@@ -77,12 +77,6 @@ describe('lib/utils/_html', function () {
 
     it('when attribute is an array', function () {
       _obj.attr = [];
-
-      expect( html.bind(null, _obj) ).to.throw();
-    });
-
-    it('when attribute is not an object', function () {
-      _obj.attr = 42;
 
       expect( html.bind(null, _obj) ).to.throw();
     });
