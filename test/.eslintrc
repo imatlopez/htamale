@@ -1,0 +1,13 @@
+{
+  "env": {
+    "mocha": true
+  },
+
+  "rules": {
+    "no-unused-expressions": 0,
+    "no-unused-vars": [
+      2,
+      { "varsIgnorePattern": "should" }
+    ]
+  }
+}
