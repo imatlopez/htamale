@@ -43,6 +43,6 @@
     "lint": "eslint ./test ./lib ./bin",
     "mocha": "nyc --reporter=html --reporter=text mocha ./test",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "test": "npm-run-all lint mocha coverage"
+    "test": "npm-run-all lint mocha"
   }
 }
