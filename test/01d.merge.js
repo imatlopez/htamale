@@ -11,7 +11,7 @@ const  expect = require('chai').expect,
 /**
  * Binds n parameters to merge
  * 
- * @param {*[]} arr 
+ * @param {Object[]} arr 
  * @returns {Function}
  * @api private
  */
