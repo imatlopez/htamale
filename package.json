@@ -1,6 +1,6 @@
 {
   "name": "htamale",
-  "version": "1.0.0-alpha1",
+  "version": "1.0.0-beta1",
   "description": "HTML templating made simple.",
   "main": "lib/index.js",
   "bin": "bin/htamale",
