@@ -39,6 +39,7 @@
     "no-unused-vars": 2,
     "semi": 2,
     "no-extra-semi": 2,
+    "no-useless-escape": "off",
     "no-redeclare": 2,
     "block-scoped-var": 2,
     "no-console": 0

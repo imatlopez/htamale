@@ -18,7 +18,7 @@ describe('lib/utils/_html', function () {
   };
 
   const opts = {
-    html: cheerio.load('<p class="class1 class3" ht-test="old">test</p>')('p')
+    append: cheerio.load('<p class="class1 class3" ht-test="old">test</p>')('p')
   };
 
   it('only needs a tag', function() {
@@ -63,7 +63,7 @@ describe('lib/utils/_html', function () {
 
     it('when tag mismatches', function () {
       const _opts = {
-        html: cheerio.load('<h1>test</h1>')('h1')
+        append: cheerio.load('<h1>test</h1>')('h1')
       };
       
       expect( html.bind(null, obj, _opts) ).to.throw();
