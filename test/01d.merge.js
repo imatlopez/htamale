@@ -58,6 +58,10 @@ describe('lib/utils/merge.js', function () {
       expect( merge(obj1, path2) ).to.deep.equal(res12);
     });
 
+    it('null, object', function () {
+      expect( merge(null, obj1) ).to.deep.equal(obj1);
+    });
+
     describe('has array', function () {
       it ('simple array, object', function () {
         const obj1a = [obj1, obj1];
