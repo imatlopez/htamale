@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require('../lib/wrapper').interpret();
+require('../lib/files.js').interpret();
