@@ -39,6 +39,13 @@ describe('lib/index.js', function () {
     const obj = { type: 'html', tag: 'li' };
     const res = '<ul><li></li><li></li><li></li></ul><ul></ul>';
 
+    it ('string => multiple', function () {
+      const str = '<ul ht-target="foo"></ul><ul></ul>';
+      const _res = '<ul>foofoofoo</ul><ul></ul>';
+      const cfg = { foo: ['foo', 'foo', 'foo'] };
+      expect( index(str, cfg) ).to.equal(wrap(_res));
+    });
+
     it ('simple html => multiple', function () {
       const str = '<ul ht-target="foo"></ul><ul></ul>';
       const cfg = { foo: [obj, obj, obj] };
@@ -49,6 +56,19 @@ describe('lib/index.js', function () {
       const str = '<ul><li ht-target="foo" ht-append></li></ul><ul></ul>';
       const cfg = { foo: [obj, obj, obj] };
       expect( index(str, cfg) ).to.equal(wrap(res));
+    });
+
+    it ('nested html => multiple', function () {
+      const str = '<ul ht-target="foo"></ul><ul></ul>';
+      const cfg = { foo: { _value: [obj, obj, obj] } };
+      expect( index(str, cfg) ).to.equal(wrap(res));
+    });
+
+    it ('has correct heirarchy', function () {
+      const str = '<ul><li ht-target="foo" ht-append><p ht-target="bar"></p></li></ul><ul></ul>';
+      const _res = '<ul><li><p>woot</p></li><li><p>woot</p></li></ul><ul></ul>';
+      const cfg = { foo: { _value: [obj, obj], bar: 'woot' } };
+      expect( index(str, cfg) ).to.equal(wrap(_res));
     });
   });
 
