@@ -4,6 +4,7 @@
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fimatlopez%2Fhtamale.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fimatlopez%2Fhtamale?ref=badge_shield)
 [![Build Status](https://travis-ci.org/imatlopez/htamale.svg?branch=master)](https://travis-ci.org/imatlopez/htamale)
 [![Coverage Status](https://coveralls.io/repos/github/imatlopez/htamale/badge.svg?branch=master)](https://coveralls.io/github/imatlopez/htamale?branch=master)
+[![Dependency Status](https://david-dm.org/imatlopez/htamale.svg)](https://david-dm.org/)
 
 ---
 
@@ -30,7 +31,8 @@ Mandatory | Optional | Dynamic
 --- | --- | ---
 `type`: String | `format`: [See Momentum.js](https://momentjs.com/docs/#/get-set/set/) | `none`
 
-Other Formats | Description
+There are some standard formats that are included.
+Defaults | Description
 --- | --- | ---
 `gen1` | Will output `MMMM YYYY` or `YYYY` if month is not given
 `gen2` | Will output `MMM YYYY` or `YYYY` if month is not given
@@ -56,8 +58,8 @@ Mandatory | Optional | Dynamic
 {
     "type": "interval",
     "delim": " - ",
-    "start": { ... },
-    "end": { ... }
+    "start": { "type": "html", "tag": "p" },
+    "end": { "type": "html", "tag": "p" }
 }
 ```
 
@@ -113,10 +115,20 @@ Arrays will clone a given element and duplicate if appending or write duplicates
 ```json
 {
     "foo": [
-        { ... },
-        { ... },
-        { ... }
+        "bar",
+        "baz"
     ]
+}
+```
+
+#### `_value` Tag
+When tags and a value must be combined, such as in deep template, using the `_value` tag.
+```json
+{
+    "foo": {
+        "_value": [],
+        "bar": "baz"
+    }
 }
 ```
 

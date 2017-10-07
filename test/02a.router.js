@@ -32,6 +32,10 @@ describe('lib/utils/router.js', function () {
     expect( parse({}) ).to.equal(null);
   });
 
+  it('object with _value => _value', function () {
+    expect( parse({ _value: 'foo' }) ).to.equal('foo');
+  });
+
   it('default types => strings', function () {
     expect( parse({ type: 'datetime', year: 2017 }) ).to.equal('2017');
     expect( parse({ type: 'interval', start: 'a', end: 'b' }) ).to.equal('a - b');
