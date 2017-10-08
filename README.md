@@ -32,8 +32,9 @@ Mandatory | Optional | Dynamic
 `type`: String | `format`: [See Momentum.js](https://momentjs.com/docs/#/get-set/set/) | `none`
 
 There are some standard formats that are included.
+
 Defaults | Description
---- | --- | ---
+--- | ---
 `gen1` | Will output `MMMM YYYY` or `YYYY` if month is not given
 `gen2` | Will output `MMM YYYY` or `YYYY` if month is not given
 ##### Example
